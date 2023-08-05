@@ -43,7 +43,7 @@ public class ElementUtils {
 		
 		try {
 			WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(durationInSeconds));
-			webElement = wait.until(ExpectedConditions.elementToBeClickable(element));
+			webElement = wait.until(ExpectedConditions.elementToBeClickable(element));  //initialise webelement
 		}catch(Throwable e) {
 			e.printStackTrace();
 		}
@@ -80,8 +80,8 @@ public class ElementUtils {
 		
 		try {
 			WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(durationInSeconds));
-			alert = wait.until(ExpectedConditions.alertIsPresent());
-		}catch(Throwable e) {
+			alert = wait.until(ExpectedConditions.alertIsPresent()); //initialise alert 
+		}catch(Throwable e) {  // catch exception,thowable is parent class of all exceptins and errors
 			e.printStackTrace();
 		}
 		

@@ -8,18 +8,21 @@ import org.openqa.selenium.support.PageFactory;
 import utils.CommonUtils;
 import utils.ElementUtils;
 
-public class SearchResultsPage {
-	
-	WebDriver driver;
-	private ElementUtils elementUtils;
-	
+public class SearchResultsPage extends BasePage {
 	public SearchResultsPage(WebDriver driver) {
-		
-		this.driver = driver;
-		PageFactory.initElements(driver,this);
-		elementUtils = new ElementUtils(driver);
-		
+		super(driver);
 	}
+	
+	/*
+	 * WebDriver driver; private ElementUtils elementUtils;
+	 * 
+	 * public SearchResultsPage(WebDriver driver) {
+	 * 
+	 * this.driver = driver; PageFactory.initElements(driver,this); elementUtils =
+	 * new ElementUtils(driver);
+	 * 
+	 * }
+	 */
 	
 	@FindBy(linkText="HP LP3065")
 	private WebElement validHPProduct;

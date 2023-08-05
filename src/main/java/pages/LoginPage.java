@@ -8,18 +8,20 @@ import org.openqa.selenium.support.PageFactory;
 import utils.CommonUtils;
 import utils.ElementUtils;
 
-public class LoginPage {
+public class LoginPage extends BasePage {
 	
-	WebDriver driver;
-	private ElementUtils elementUtils;
+	 public LoginPage(WebDriver driver) {
+			super(driver);
+		}
 	
-	public LoginPage(WebDriver driver) {
-		
-		this.driver = driver;
-		PageFactory.initElements(driver,this);
-		elementUtils = new ElementUtils(driver);
-		
-	}
+		/*
+		 * public LoginPage(WebDriver driver) {
+		 * 
+		 * this.driver = driver; PageFactory.initElements(driver,this); elementUtils =
+		 * new ElementUtils(driver);
+		 * 
+		 * }
+		 */
 	
 	@FindBy(id="input-email")
 	private WebElement emailField;

@@ -8,18 +8,22 @@ import org.openqa.selenium.support.PageFactory;
 import utils.CommonUtils;
 import utils.ElementUtils;
 
-public class RegisterPage {
-	
-	WebDriver driver;
-	private ElementUtils elementUtils;
+public class RegisterPage extends BasePage {
 	
 	public RegisterPage(WebDriver driver) {
-		
-		this.driver = driver;
-		PageFactory.initElements(driver,this);
-		elementUtils = new ElementUtils(driver);
-		
+		super(driver);
 	}
+	
+	/*
+	 * WebDriver driver; private ElementUtils elementUtils;
+	 * 
+	 * public RegisterPage(WebDriver driver) {
+	 * 
+	 * this.driver = driver; PageFactory.initElements(driver,this); elementUtils =
+	 * new ElementUtils(driver);
+	 * 
+	 * }
+	 */
 	
 	@FindBy(id="input-firstname")
 	private WebElement firstNameField;

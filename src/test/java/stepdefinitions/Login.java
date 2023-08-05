@@ -32,6 +32,7 @@ public class Login {
 	
 	
 	@When("^User enters valid email address (.+) into email field$")
+	// {string} chya jagi .+ vaprle ,tiny gherkin chrome extension use karun regular expression use kele
 	public void User_enters_valid_email_address_into_email_field(String emailText) {
 		
 		loginPage.enterEmailAddress(emailText);
